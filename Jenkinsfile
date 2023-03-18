@@ -1,5 +1,5 @@
 pipeline{
-  agent any
+  agent any{
     stages{
       Stage (Build) {
               docker build -t httpd:1.0                
@@ -11,5 +11,5 @@ pipeline{
       }
   
     }
-
+  }
 }

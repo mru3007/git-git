@@ -6,7 +6,7 @@ pipeline{
       }
       
       stage (deploy){
-              docker run -itdp 80:80 --name httpd httpd
+              docker run ("-itdp 80:80 --name httpd httpd")
            
       }
   

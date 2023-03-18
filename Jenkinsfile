@@ -10,7 +10,7 @@ pipeline{
       stage ("Build") {
         steps{
           dir ("/mnt/data"){
-          docker pull {'httpd' }
+          docker {pull 'httpd'}
           sh "cp /mnt/data/index.html /usr/local/apache2/htdocs "
        }
       }

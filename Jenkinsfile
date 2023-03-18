@@ -11,7 +11,7 @@ pipeline{
         steps{
                    dir ("/mnt/data"){
                    
-                       sh "dpcker pull httpd"
+                       sh "docker pull httpd"
                        sh "docker run -itdp 80:80 --name server httpd "
                        sh "cp /mnt/data/index.html /usr/local/apache2/htdocs "
                     }

@@ -12,8 +12,8 @@ pipeline{
                    dir ("/mnt/data"){
                    
                        sh "docker pull httpd"
-                       sh "docker run -itdp 86:80 --name server-3 httpd"
-                       sh "docker cp /mnt/data/index.html server-3:/usr/local/apache2/htdocs/"
+                       sh "docker run -itdp 90:80 --name server-0 httpd"
+                       sh "docker cp /mnt/data/index.html server-0:/usr/local/apache2/htdocs/"
                     }
         }
       

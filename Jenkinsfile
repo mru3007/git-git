@@ -9,14 +9,14 @@ pipeline{
     stages{
       stage ("Build") {
         steps{
-          docker { 'pull httpd' }
-          docker { 'cp /mnt/data/index.html /usr/local/apache2/htdocs '}
+          docker pull {'httpd' }
+          sh "cp /mnt/data/index.html /usr/local/apache2/htdocs "
        }
       }
       
       stage ("deploy"){
         steps{
-          docker {'run -itdp 80:80 --name httpd httpd'}
+          docker run {'-itdp 80:80 --name httpd httpd'}
         }
       }
   

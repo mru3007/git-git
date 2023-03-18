@@ -1,16 +1,16 @@
 pipeline{
-  agent {
+  agent any
     
     stages{
-      stage (Build) {
+      stage ("Build") {
               docker build ("-t httpd:1.0")               
       }
       
-      stage (deploy){
+      stage ("deploy"){
               docker run ("-itdp 80:80 --name httpd httpd:1.0")
            
       }
   
     }
-  }
+  
 }

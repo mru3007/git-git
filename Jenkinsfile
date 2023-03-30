@@ -21,7 +21,7 @@ pipeline {
      stage ("build_gol") {
       steps {
         git "https://github.com/mru3007/game-of-life.git"
-        sh "mvn clean install"    
+        sh "mvn install"    
       } 
     }
      stage ("deploy") {
